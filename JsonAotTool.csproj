@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PublishAot>True</PublishAot>
+    <PublishTrimmed>True</PublishTrimmed>
+  </PropertyGroup>
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+		<PackAsTool>false</PackAsTool>
+		<ToolCommandName>JSONAOT</ToolCommandName>
+		<PackageOutputPath></PackageOutputPath>
+		<PackageTags>JSON; Serialization; .NET; AOT; AheadOfTime; Compiler; CodeGeneration; SourceGeneration; Packages; .NETCore; .NETFramework; System.Text.Json; JsonSerialization; JsonDeserialization; JsonConverter; JsonSerializer; JsonTypeInfo; JsonSerializerContext; SerializationAttributes; RuntimeCompilation; OptimizedCode; Performance; CrossPlatform; Lightweight; Utility; CodeGenerator; AOTCompliant; NuGetPackages; Compatibility; Automated; Tooling; Development; Refactoring;DotnetTool; VisualStudio; CommandLine; CLI; SDK; AOTCompatibility; SerializationUtility; JSONSupport;</PackageTags>
+		<Company />
+		<Authors>ChristopherDeBon</Authors>
+		<Title>JsonAot</Title>
+		<PackageId>JsonAot</PackageId>
+		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+		<Product>JsonAot</Product>
+		<Copyright>MIT</Copyright>
+		<Description>This tool automates the source generation code needed for AOT compliant JSON serialization.
+Simply add [JsonAot] attribute to all classes to be serialized and deserialized, while utilizing
+the built-in Serialize and Deserialize commands provided.</Description>
+		<PackageIcon>jsonaot_logo.png</PackageIcon>
+		<ApplicationIcon>jsonaot_logo_icon.ico</ApplicationIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Content Include="jsonaot_logo_icon.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="..\..\..\..\jsonaot_logo.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.10.0-3.final" />
+  </ItemGroup>
+
+</Project>
